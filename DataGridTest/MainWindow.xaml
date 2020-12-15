@@ -1,0 +1,24 @@
+<Window x:Class="DataGridTest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DataGridTest"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="500">
+    <Grid>
+        <DataGrid x:Name="Data_Grid1" Padding="2" Background="PowderBlue" AutoGenerateColumns="False" Margin="10,35,10,10">
+            
+            <!-- Column Header bindings -->
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="test" Binding="{Binding NoteName}" Width="*" />
+                <DataGridTextColumn Header="text" Binding="{Binding NoteText}" Width="*" />
+            </DataGrid.Columns> 
+            
+
+
+        </DataGrid>
+        <Button x:Name="Some_Button" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="195,10,0,0" Click="Some_Button_Click"/>
+
+    </Grid>
+</Window>
