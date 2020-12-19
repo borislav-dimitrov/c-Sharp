@@ -1,0 +1,16 @@
+    <Window.Resources>
+        <Style TargetType="{x:Type Button}" x:Key="ImageButtonStyle">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <ContentPresenter/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Button Style="{StaticResource ImageButtonStyle}" Click="ImageButton_Click" Width="25" HorizontalAlignment="Left" VerticalAlignment="Top" >
+            <Image Source="C:\Users\user\source\repos\WpfApp3\WpfApp3\bin\Debug\tic-tac-toe_39453.ico"/>
+        </Button>
+    </Grid>
