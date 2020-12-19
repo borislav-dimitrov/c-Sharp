@@ -1,0 +1,7 @@
+C:\Users\user\source\repos\AdventOfCodeDay01_pt02\AdventOfCodeDay01_pt02\obj\Debug\AdventOfCodeDay01_pt02.csprojAssemblyReference.cache
+C:\Users\user\source\repos\AdventOfCodeDay01_pt02\AdventOfCodeDay01_pt02\obj\Debug\AdventOfCodeDay01_pt02.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\AdventOfCodeDay01_pt02\AdventOfCodeDay01_pt02\bin\Debug\AdventOfCodeDay01_pt02.exe.config
+C:\Users\user\source\repos\AdventOfCodeDay01_pt02\AdventOfCodeDay01_pt02\bin\Debug\AdventOfCodeDay01_pt02.exe
+C:\Users\user\source\repos\AdventOfCodeDay01_pt02\AdventOfCodeDay01_pt02\bin\Debug\AdventOfCodeDay01_pt02.pdb
+C:\Users\user\source\repos\AdventOfCodeDay01_pt02\AdventOfCodeDay01_pt02\obj\Debug\AdventOfCodeDay01_pt02.exe
+C:\Users\user\source\repos\AdventOfCodeDay01_pt02\AdventOfCodeDay01_pt02\obj\Debug\AdventOfCodeDay01_pt02.pdb
