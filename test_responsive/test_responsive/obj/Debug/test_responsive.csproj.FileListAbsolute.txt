@@ -1,0 +1,15 @@
+C:\Users\user\source\repos\test_responsive\test_responsive\bin\Debug\test_responsive.exe.config
+C:\Users\user\source\repos\test_responsive\test_responsive\bin\Debug\test_responsive.exe
+C:\Users\user\source\repos\test_responsive\test_responsive\bin\Debug\test_responsive.pdb
+C:\Users\user\source\repos\test_responsive\test_responsive\obj\Debug\test_responsive.csprojAssemblyReference.cache
+C:\Users\user\source\repos\test_responsive\test_responsive\obj\Debug\MainWindow.g.cs
+C:\Users\user\source\repos\test_responsive\test_responsive\obj\Debug\App.g.cs
+C:\Users\user\source\repos\test_responsive\test_responsive\obj\Debug\test_responsive_MarkupCompile.cache
+C:\Users\user\source\repos\test_responsive\test_responsive\obj\Debug\test_responsive_MarkupCompile.lref
+C:\Users\user\source\repos\test_responsive\test_responsive\obj\Debug\MainWindow.baml
+C:\Users\user\source\repos\test_responsive\test_responsive\obj\Debug\test_responsive.g.resources
+C:\Users\user\source\repos\test_responsive\test_responsive\obj\Debug\test_responsive.Properties.Resources.resources
+C:\Users\user\source\repos\test_responsive\test_responsive\obj\Debug\test_responsive.csproj.GenerateResource.cache
+C:\Users\user\source\repos\test_responsive\test_responsive\obj\Debug\test_responsive.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\test_responsive\test_responsive\obj\Debug\test_responsive.exe
+C:\Users\user\source\repos\test_responsive\test_responsive\obj\Debug\test_responsive.pdb

@@ -1,0 +1,15 @@
+C:\Users\user\source\repos\telephoneBook\telephoneBook\bin\Debug\telephoneBook.exe.config
+C:\Users\user\source\repos\telephoneBook\telephoneBook\bin\Debug\telephoneBook.exe
+C:\Users\user\source\repos\telephoneBook\telephoneBook\bin\Debug\telephoneBook.pdb
+C:\Users\user\source\repos\telephoneBook\telephoneBook\obj\Debug\telephoneBook.csprojAssemblyReference.cache
+C:\Users\user\source\repos\telephoneBook\telephoneBook\obj\Debug\MainWindow.g.cs
+C:\Users\user\source\repos\telephoneBook\telephoneBook\obj\Debug\App.g.cs
+C:\Users\user\source\repos\telephoneBook\telephoneBook\obj\Debug\telephoneBook_MarkupCompile.cache
+C:\Users\user\source\repos\telephoneBook\telephoneBook\obj\Debug\telephoneBook_MarkupCompile.lref
+C:\Users\user\source\repos\telephoneBook\telephoneBook\obj\Debug\MainWindow.baml
+C:\Users\user\source\repos\telephoneBook\telephoneBook\obj\Debug\telephoneBook.g.resources
+C:\Users\user\source\repos\telephoneBook\telephoneBook\obj\Debug\telephoneBook.Properties.Resources.resources
+C:\Users\user\source\repos\telephoneBook\telephoneBook\obj\Debug\telephoneBook.csproj.GenerateResource.cache
+C:\Users\user\source\repos\telephoneBook\telephoneBook\obj\Debug\telephoneBook.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\telephoneBook\telephoneBook\obj\Debug\telephoneBook.exe
+C:\Users\user\source\repos\telephoneBook\telephoneBook\obj\Debug\telephoneBook.pdb

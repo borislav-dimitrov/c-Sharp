@@ -1,0 +1,15 @@
+C:\Users\user\source\repos\MyNotes\MyNotes\bin\Debug\MyNotes.exe.config
+C:\Users\user\source\repos\MyNotes\MyNotes\bin\Debug\MyNotes.exe
+C:\Users\user\source\repos\MyNotes\MyNotes\bin\Debug\MyNotes.pdb
+C:\Users\user\source\repos\MyNotes\MyNotes\obj\Debug\MyNotes.csprojAssemblyReference.cache
+C:\Users\user\source\repos\MyNotes\MyNotes\obj\Debug\MainWindow.g.cs
+C:\Users\user\source\repos\MyNotes\MyNotes\obj\Debug\App.g.cs
+C:\Users\user\source\repos\MyNotes\MyNotes\obj\Debug\MyNotes_MarkupCompile.cache
+C:\Users\user\source\repos\MyNotes\MyNotes\obj\Debug\MyNotes_MarkupCompile.lref
+C:\Users\user\source\repos\MyNotes\MyNotes\obj\Debug\MainWindow.baml
+C:\Users\user\source\repos\MyNotes\MyNotes\obj\Debug\MyNotes.g.resources
+C:\Users\user\source\repos\MyNotes\MyNotes\obj\Debug\MyNotes.Properties.Resources.resources
+C:\Users\user\source\repos\MyNotes\MyNotes\obj\Debug\MyNotes.csproj.GenerateResource.cache
+C:\Users\user\source\repos\MyNotes\MyNotes\obj\Debug\MyNotes.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\MyNotes\MyNotes\obj\Debug\MyNotes.exe
+C:\Users\user\source\repos\MyNotes\MyNotes\obj\Debug\MyNotes.pdb

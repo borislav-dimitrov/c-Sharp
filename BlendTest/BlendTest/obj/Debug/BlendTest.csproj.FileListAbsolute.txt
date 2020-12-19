@@ -1,0 +1,15 @@
+C:\Users\user\source\repos\BlendTest\BlendTest\bin\Debug\BlendTest.exe.config
+C:\Users\user\source\repos\BlendTest\BlendTest\bin\Debug\BlendTest.exe
+C:\Users\user\source\repos\BlendTest\BlendTest\bin\Debug\BlendTest.pdb
+C:\Users\user\source\repos\BlendTest\BlendTest\obj\Debug\BlendTest.csprojAssemblyReference.cache
+C:\Users\user\source\repos\BlendTest\BlendTest\obj\Debug\MainWindow.g.cs
+C:\Users\user\source\repos\BlendTest\BlendTest\obj\Debug\App.g.cs
+C:\Users\user\source\repos\BlendTest\BlendTest\obj\Debug\BlendTest_MarkupCompile.cache
+C:\Users\user\source\repos\BlendTest\BlendTest\obj\Debug\BlendTest_MarkupCompile.lref
+C:\Users\user\source\repos\BlendTest\BlendTest\obj\Debug\MainWindow.baml
+C:\Users\user\source\repos\BlendTest\BlendTest\obj\Debug\BlendTest.g.resources
+C:\Users\user\source\repos\BlendTest\BlendTest\obj\Debug\BlendTest.Properties.Resources.resources
+C:\Users\user\source\repos\BlendTest\BlendTest\obj\Debug\BlendTest.csproj.GenerateResource.cache
+C:\Users\user\source\repos\BlendTest\BlendTest\obj\Debug\BlendTest.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\BlendTest\BlendTest\obj\Debug\BlendTest.exe
+C:\Users\user\source\repos\BlendTest\BlendTest\obj\Debug\BlendTest.pdb

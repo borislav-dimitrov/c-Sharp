@@ -1,0 +1,15 @@
+C:\Users\user\source\repos\AngelSix002\AngelSix002\bin\Debug\AngelSix002.exe.config
+C:\Users\user\source\repos\AngelSix002\AngelSix002\bin\Debug\AngelSix002.exe
+C:\Users\user\source\repos\AngelSix002\AngelSix002\bin\Debug\AngelSix002.pdb
+C:\Users\user\source\repos\AngelSix002\AngelSix002\obj\Debug\AngelSix002.csprojAssemblyReference.cache
+C:\Users\user\source\repos\AngelSix002\AngelSix002\obj\Debug\MainWindow.g.cs
+C:\Users\user\source\repos\AngelSix002\AngelSix002\obj\Debug\App.g.cs
+C:\Users\user\source\repos\AngelSix002\AngelSix002\obj\Debug\AngelSix002_MarkupCompile.cache
+C:\Users\user\source\repos\AngelSix002\AngelSix002\obj\Debug\AngelSix002_MarkupCompile.lref
+C:\Users\user\source\repos\AngelSix002\AngelSix002\obj\Debug\MainWindow.baml
+C:\Users\user\source\repos\AngelSix002\AngelSix002\obj\Debug\AngelSix002.g.resources
+C:\Users\user\source\repos\AngelSix002\AngelSix002\obj\Debug\AngelSix002.Properties.Resources.resources
+C:\Users\user\source\repos\AngelSix002\AngelSix002\obj\Debug\AngelSix002.csproj.GenerateResource.cache
+C:\Users\user\source\repos\AngelSix002\AngelSix002\obj\Debug\AngelSix002.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\AngelSix002\AngelSix002\obj\Debug\AngelSix002.exe
+C:\Users\user\source\repos\AngelSix002\AngelSix002\obj\Debug\AngelSix002.pdb

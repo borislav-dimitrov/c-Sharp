@@ -1,0 +1,15 @@
+C:\Users\user\source\repos\GuessTheNumber\GuessTheNumber\bin\Debug\GuessTheNumber.exe.config
+C:\Users\user\source\repos\GuessTheNumber\GuessTheNumber\bin\Debug\GuessTheNumber.exe
+C:\Users\user\source\repos\GuessTheNumber\GuessTheNumber\bin\Debug\GuessTheNumber.pdb
+C:\Users\user\source\repos\GuessTheNumber\GuessTheNumber\obj\Debug\GuessTheNumber.csprojAssemblyReference.cache
+C:\Users\user\source\repos\GuessTheNumber\GuessTheNumber\obj\Debug\MainWindow.g.cs
+C:\Users\user\source\repos\GuessTheNumber\GuessTheNumber\obj\Debug\App.g.cs
+C:\Users\user\source\repos\GuessTheNumber\GuessTheNumber\obj\Debug\GuessTheNumber_MarkupCompile.cache
+C:\Users\user\source\repos\GuessTheNumber\GuessTheNumber\obj\Debug\GuessTheNumber_MarkupCompile.lref
+C:\Users\user\source\repos\GuessTheNumber\GuessTheNumber\obj\Debug\MainWindow.baml
+C:\Users\user\source\repos\GuessTheNumber\GuessTheNumber\obj\Debug\GuessTheNumber.g.resources
+C:\Users\user\source\repos\GuessTheNumber\GuessTheNumber\obj\Debug\GuessTheNumber.Properties.Resources.resources
+C:\Users\user\source\repos\GuessTheNumber\GuessTheNumber\obj\Debug\GuessTheNumber.csproj.GenerateResource.cache
+C:\Users\user\source\repos\GuessTheNumber\GuessTheNumber\obj\Debug\GuessTheNumber.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\GuessTheNumber\GuessTheNumber\obj\Debug\GuessTheNumber.exe
+C:\Users\user\source\repos\GuessTheNumber\GuessTheNumber\obj\Debug\GuessTheNumber.pdb

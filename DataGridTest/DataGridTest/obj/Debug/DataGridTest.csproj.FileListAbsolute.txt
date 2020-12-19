@@ -1,0 +1,16 @@
+C:\Users\user\source\repos\DataGridTest\DataGridTest\bin\Debug\DataGridTest.exe.config
+C:\Users\user\source\repos\DataGridTest\DataGridTest\bin\Debug\DataGridTest.exe
+C:\Users\user\source\repos\DataGridTest\DataGridTest\bin\Debug\DataGridTest.pdb
+C:\Users\user\source\repos\DataGridTest\DataGridTest\obj\Debug\MainWindow.g.cs
+C:\Users\user\source\repos\DataGridTest\DataGridTest\obj\Debug\App.g.cs
+C:\Users\user\source\repos\DataGridTest\DataGridTest\obj\Debug\DataGridTest_MarkupCompile.cache
+C:\Users\user\source\repos\DataGridTest\DataGridTest\obj\Debug\DataGridTest_MarkupCompile.lref
+C:\Users\user\source\repos\DataGridTest\DataGridTest\obj\Debug\MainWindow.baml
+C:\Users\user\source\repos\DataGridTest\DataGridTest\obj\Debug\DataGridTest.g.resources
+C:\Users\user\source\repos\DataGridTest\DataGridTest\obj\Debug\DataGridTest.Properties.Resources.resources
+C:\Users\user\source\repos\DataGridTest\DataGridTest\obj\Debug\DataGridTest.csproj.GenerateResource.cache
+C:\Users\user\source\repos\DataGridTest\DataGridTest\obj\Debug\DataGridTest.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\DataGridTest\DataGridTest\obj\Debug\DataGridTest.exe
+C:\Users\user\source\repos\DataGridTest\DataGridTest\obj\Debug\DataGridTest.pdb
+C:\Users\user\source\repos\DataGridTest\DataGridTest\obj\Debug\DataGridTest.csprojAssemblyReference.cache
+C:\Users\user\source\repos\DataGridTest\DataGridTest\obj\Debug\DataGridTest.csproj.ResolveComReference.cache

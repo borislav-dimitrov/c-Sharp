@@ -1,0 +1,15 @@
+C:\Users\user\source\repos\SqlConnectionTest\SqlConnectionTest\obj\Debug\SqlConnectionTest.csprojAssemblyReference.cache
+C:\Users\user\source\repos\SqlConnectionTest\SqlConnectionTest\obj\Debug\MainWindow.g.cs
+C:\Users\user\source\repos\SqlConnectionTest\SqlConnectionTest\obj\Debug\App.g.cs
+C:\Users\user\source\repos\SqlConnectionTest\SqlConnectionTest\obj\Debug\SqlConnectionTest_MarkupCompile.cache
+C:\Users\user\source\repos\SqlConnectionTest\SqlConnectionTest\obj\Debug\SqlConnectionTest_MarkupCompile.lref
+C:\Users\user\source\repos\SqlConnectionTest\SqlConnectionTest\bin\Debug\SqlConnectionTest.exe.config
+C:\Users\user\source\repos\SqlConnectionTest\SqlConnectionTest\bin\Debug\SqlConnectionTest.exe
+C:\Users\user\source\repos\SqlConnectionTest\SqlConnectionTest\bin\Debug\SqlConnectionTest.pdb
+C:\Users\user\source\repos\SqlConnectionTest\SqlConnectionTest\obj\Debug\MainWindow.baml
+C:\Users\user\source\repos\SqlConnectionTest\SqlConnectionTest\obj\Debug\SqlConnectionTest.g.resources
+C:\Users\user\source\repos\SqlConnectionTest\SqlConnectionTest\obj\Debug\SqlConnectionTest.Properties.Resources.resources
+C:\Users\user\source\repos\SqlConnectionTest\SqlConnectionTest\obj\Debug\SqlConnectionTest.csproj.GenerateResource.cache
+C:\Users\user\source\repos\SqlConnectionTest\SqlConnectionTest\obj\Debug\SqlConnectionTest.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\SqlConnectionTest\SqlConnectionTest\obj\Debug\SqlConnectionTest.exe
+C:\Users\user\source\repos\SqlConnectionTest\SqlConnectionTest\obj\Debug\SqlConnectionTest.pdb
