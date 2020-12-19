@@ -1,0 +1,7 @@
+C:\Users\user\source\repos\CodeAdventureDay2_pt_01\CodeAdventureDay2_pt_01\bin\Debug\CodeAdventureDay2_pt_01.exe.config
+C:\Users\user\source\repos\CodeAdventureDay2_pt_01\CodeAdventureDay2_pt_01\bin\Debug\CodeAdventureDay2_pt_01.exe
+C:\Users\user\source\repos\CodeAdventureDay2_pt_01\CodeAdventureDay2_pt_01\bin\Debug\CodeAdventureDay2_pt_01.pdb
+C:\Users\user\source\repos\CodeAdventureDay2_pt_01\CodeAdventureDay2_pt_01\obj\Debug\CodeAdventureDay2_pt_01.csprojAssemblyReference.cache
+C:\Users\user\source\repos\CodeAdventureDay2_pt_01\CodeAdventureDay2_pt_01\obj\Debug\CodeAdventureDay2_pt_01.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\CodeAdventureDay2_pt_01\CodeAdventureDay2_pt_01\obj\Debug\CodeAdventureDay2_pt_01.exe
+C:\Users\user\source\repos\CodeAdventureDay2_pt_01\CodeAdventureDay2_pt_01\obj\Debug\CodeAdventureDay2_pt_01.pdb
