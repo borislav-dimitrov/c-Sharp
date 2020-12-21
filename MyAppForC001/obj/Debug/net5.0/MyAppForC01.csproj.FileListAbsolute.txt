@@ -1,0 +1,16 @@
+/home/user/Documents/visual studio code/MyAppForC01/bin/Debug/net5.0/MyAppForC01
+/home/user/Documents/visual studio code/MyAppForC01/bin/Debug/net5.0/MyAppForC01.deps.json
+/home/user/Documents/visual studio code/MyAppForC01/bin/Debug/net5.0/MyAppForC01.runtimeconfig.json
+/home/user/Documents/visual studio code/MyAppForC01/bin/Debug/net5.0/MyAppForC01.runtimeconfig.dev.json
+/home/user/Documents/visual studio code/MyAppForC01/bin/Debug/net5.0/MyAppForC01.dll
+/home/user/Documents/visual studio code/MyAppForC01/bin/Debug/net5.0/ref/MyAppForC01.dll
+/home/user/Documents/visual studio code/MyAppForC01/bin/Debug/net5.0/MyAppForC01.pdb
+/home/user/Documents/visual studio code/MyAppForC01/obj/Debug/net5.0/MyAppForC01.csprojAssemblyReference.cache
+/home/user/Documents/visual studio code/MyAppForC01/obj/Debug/net5.0/MyAppForC01.GeneratedMSBuildEditorConfig.editorconfig
+/home/user/Documents/visual studio code/MyAppForC01/obj/Debug/net5.0/MyAppForC01.AssemblyInfoInputs.cache
+/home/user/Documents/visual studio code/MyAppForC01/obj/Debug/net5.0/MyAppForC01.AssemblyInfo.cs
+/home/user/Documents/visual studio code/MyAppForC01/obj/Debug/net5.0/MyAppForC01.csproj.CoreCompileInputs.cache
+/home/user/Documents/visual studio code/MyAppForC01/obj/Debug/net5.0/MyAppForC01.dll
+/home/user/Documents/visual studio code/MyAppForC01/obj/Debug/net5.0/ref/MyAppForC01.dll
+/home/user/Documents/visual studio code/MyAppForC01/obj/Debug/net5.0/MyAppForC01.pdb
+/home/user/Documents/visual studio code/MyAppForC01/obj/Debug/net5.0/MyAppForC01.genruntimeconfig.cache
