@@ -1,0 +1,63 @@
+﻿<Window x:Class="TO_Bot.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TO_Bot"
+        mc:Ignorable="d"
+        Title="Talisman Online Bot" Height="500" Width="800">
+    <Border>
+        <Border.Background>
+            <ImageBrush x:Name="bgImg"/>
+        </Border.Background>
+        
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Button x:Name="runScriptBtn" Content="Run Bot&#x0a; Script" Grid.Column="0" Grid.Row="0" Click="runScriptBtn_Click" Margin="5,5,5,5" />
+            <Button x:Name="stopScriptBtn" Content="Stop Bot&#x0a;  Script" Grid.Column="1" Grid.Row="0" Click="closeScriptBtn_Click" Margin="5,5,5,5"/>
+            <Button x:Name="editScriptBtn" Content="Edit Bot&#x0a;  Script" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" Click="editScriptBtn_Click" Margin="5,5,5,5"/>
+
+            <Label x:Name="playerHPLBL" Grid.Column="2" Grid.ColumnSpan="2" FontWeight="Bold" Foreground="Red" Background="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <Label x:Name="setLowHPlbl" Content="Set Low HP&#x0a; Threshold" Grid.Column="4" Grid.Row="0" FontWeight="Bold" Foreground="White" Background="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox x:Name="setLowHPTB" Text="50" Grid.Column="5" Grid.Row="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" PreviewTextInput="setLowHPTB_PreviewTextInput" CommandManager.PreviewExecuted="textBox_PreviewExecutedHP" Background="SkyBlue" />
+            
+            <TextBox x:Name="setLowMPTB" Text="50" Grid.Column="9" Grid.Row="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" PreviewTextInput="setLowMPTB_PreviewTextInput" CommandManager.PreviewExecuted="textBox_PreviewExecutedMP" Background="SkyBlue" />
+            <Label x:Name="playerMPLBL" Grid.Column="6" Grid.ColumnSpan="2" FontWeight="Bold" Foreground="LightBlue" Background="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <Label x:Name="setLowMPlbl" Content="Set Low MP&#x0a; Threshold" Grid.Column="8" Grid.Row="0" FontWeight="Bold" Foreground="White" Background="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <Label Content="Monsters&#x0a; Killed" Grid.Column="9" Grid.Row="7" FontWeight="Bold" Foreground="White" Background="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <Label x:Name="counterlbl" Content="" Grid.Column="9" Grid.Row="8" FontWeight="Bold" Foreground="White" Background="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+
+            <TextBox x:Name="logTB" Grid.Column="0" Grid.ColumnSpan="2" Background="SkyBlue" Grid.Row="3" Grid.RowSpan="6" IsReadOnly="true" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto"/>
+
+            <RadioButton x:Name="MeleeRBtn" Content="Melee" Grid.Column="0" Grid.Row="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" Foreground="White" Checked="Mele" />
+            <RadioButton x:Name="CasterRBtn" Content="Caster" Grid.Column="1" Grid.Row="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" Foreground="White" Checked="Caster" IsChecked="True"/>
+            
+
+
+        </Grid>
+    </Border>
+    
+</Window>

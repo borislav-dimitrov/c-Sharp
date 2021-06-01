@@ -1,0 +1,131 @@
+﻿<Window x:Class="MyGame.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyGame"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterOwner"
+        WindowState="Maximized"
+        Title="MyGame" Height="1090" Width="1900">
+
+
+    <Grid  Background="Gray">
+        <Grid x:Name="gameScreen">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Location -->
+            <Label Grid.Column="1" VerticalAlignment="Top" HorizontalContentAlignment="Left" Content="Location" Margin="10,5,0,0"/>
+            <Label x:Name="lblLocation" Grid.Column="1" VerticalAlignment="Top" HorizontalContentAlignment="Center" Content="" Margin="0,5,0,0"/>
+
+            <!--  Player Info -->
+            <Label Content="Player" Grid.Column="0" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,5,0,0"/>
+            <Label Content="Player Name:" Grid.Column="0" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,30,0,0"/>
+            <Label x:Name="lblPlayerName" Content="" Grid.Column="0" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,30,0,0"/>
+            <Label Content="Player HP:" Grid.Column="0" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,48,0,0"/>
+            <Label x:Name="lblPlayerHP" Content="" Grid.Column="0" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,48,0,0"/>
+
+            <Label Content="Player Armor:" Grid.Column="0" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,65,0,0"/>
+            <Label x:Name="lblPlayerArmor" Content="" Grid.Column="0" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,65,0,0"/>
+
+            <Label Content="Player BlockValue:" Grid.Column="0" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,82,0,0"/>
+            <Label x:Name="lblPlayerBlockValue" Content="" Grid.Column="0" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,82,0,0"/>
+
+            <Label Content="Player Min DMG:" Grid.Column="0" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,98,0,0"/>
+            <Label x:Name="lblPlayerMinDMG" Content="" Grid.Column="0" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,98,0,0"/>
+
+            <Label Content="Player Max DMG:" Grid.Column="0" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,115,0,0"/>
+            <Label x:Name="lblPlayerMaxDMG" Content="" Grid.Column="0" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,115,0,0"/>
+
+            <Label Content="Player Experience:" Grid.Column="0" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,130,0,0"/>
+            <Label x:Name="lblPlayerExp" Content="" Grid.Column="0" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,130,0,0"/>
+            <Label Content="Player Level:" Grid.Column="0" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,150,0,0"/>
+            <Label x:Name="lblPlayerLvl" Content="" Grid.Column="0" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,150,0,0"/>
+
+            <Label Content="Combat State:" Grid.Column="0" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,180,0,0"/>
+            <Label x:Name="lblPlayerCombatState" Content="" Grid.Column="0" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,180,0,0"/>
+
+            <!-- Enemy Info -->
+            <Label Content="Enemy" Grid.Column="2" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,5,0,0"/>
+            <Label Content="Enemy Name:" Grid.Column="2" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,30,0,0"/>
+            <Label x:Name="lblEnemyName" Content="" Grid.Column="2" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,30,0,0"/>
+            <Label Content="Enemy HP:" Grid.Column="2" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,50,0,0"/>
+            <Label x:Name="lblEnemyHP" Content="" Grid.Column="2" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,50,0,0"/>
+
+            <Label Content="Enemy Min DMG:" Grid.Column="2" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,80,0,0"/>
+            <Label x:Name="lblEnemyMinDMG" Content="" Grid.Column="2" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,80,0,0"/>
+            <Label Content="Enemy Max DMG:" Grid.Column="2" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,100,0,0"/>
+            <Label x:Name="lblEnemyMaxDMG" Content="" Grid.Column="2" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,100,0,0"/>
+
+            <Label Content="Enemy Level:" Grid.Column="2" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,130,0,0"/>
+            <Label x:Name="lblEnemyLvl" Content="" Grid.Column="2" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,130,0,0"/>
+
+            <Label Content="Count:" Grid.Column="2" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,150,0,0"/>
+            <Label x:Name="lblNmyCount" Content="" Grid.Column="2" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,150,0,0"/>
+
+            <!-- Loot Table -->
+            <Label Content="Loot Table:" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,-20" FontWeight="Bold" />
+            <ListBox x:Name="lbDropTable" Grid.Column="2" VerticalAlignment="Center" Height="200" Margin="0,0,0,-250" Background="Black" Foreground="White" SelectionChanged="lbDropTable_SelectionChanged"/>
+
+            <!-- Drawing -->
+            <Canvas x:Name="drawScene" Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="0,35,0,0" MouseRightButtonDown="drawScene_MouseRightButtonDown"/>
+            <Canvas x:Name="drawCombat" Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="0,35,0,0"/>
+
+            <!-- Combat Buttons -->
+            <Button x:Name="btnCombat1" Content="Basic Attack" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0" Click="btnCombat1_Click" Visibility="Hidden"/>
+            <Button x:Name="btnCombat2" Content="Skill 2" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,50,0,0" Click="btnCombat2_Click" Visibility="Hidden"/>
+            <Button x:Name="btnCombat3" Content="Skill 3" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,100,0,0" Click="btnCombat3_Click" Visibility="Hidden"/>
+            <Button x:Name="btnCombat4" Content="Skill 4" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,150,0,0" Click="btnCombat4_Click" Visibility="Hidden"/>
+
+            <!-- Test Button -->
+            <Button x:Name="btnMap" Content="Map" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Width="70"  Click="btnMap_Click" Margin="0,0,0,50"/>
+            <Button x:Name="btnHack" Content="test" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Width="70"  Click="btnHack_Click" Margin="250,0,0,50"/>
+
+            <!-- Movement -->
+            <Button x:Name="btnMoveUp" Content="Up" Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,80,0,0" Width="auto"  Visibility="Hidden" Click="btnMoveUp_Click"/>
+            <Button x:Name="btnMoveLeft" Content="Left" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20,0,0,0" Width="auto"  Visibility="Hidden" Click="btnMoveLeft_Click"/>
+            <Button x:Name="btnMoveRight" Content="Right" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,20,0" Width="auto" Visibility="Hidden" Click="btnMoveRight_Click"/>
+            <Button x:Name="btnMoveDown" Content="Down" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,0,0,50" Width="auto"  Visibility="Hidden" Click="btnMoveDown_Click"/>
+
+            <!-- Monsters Nearby -->
+            <Label Content="Nearby Enemies:" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,590" FontWeight="Bold" />
+            <ListBox x:Name="lbNearbyEnemies" Grid.Column="2" VerticalAlignment="Center" Height="200" Margin="0,0,0,360" Background="Black" Foreground="White" SelectionChanged="lblNearbyEnemies_SelectionChanged" />
+            <Button x:Name="btnFight" Content="F i g h t" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,120" Width="70" Height="30" Background="DarkRed" Foreground="Orange" FontWeight="ExtraBold" Click="btnFight_Click" />
+
+            <!-- Combat Log -->
+            <Label Content="Combat log:" Grid.Column="2" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,0,0,200" FontWeight="Bold" />
+            <TextBox x:Name="tbCombatLog" Grid.Column="2" VerticalAlignment="Bottom"  Height="200" Margin="0,0,0,1" Background="Black" Foreground="White" IsReadOnly="True"/>
+
+            <!-- Inventory -->
+            <Label Content="Inventory:" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,-20" FontWeight="Bold" />
+            <ListBox x:Name="lbInventory" Grid.Column="0" VerticalAlignment="Center" Height="200" Margin="0,0,0,-250" Background="Black" Foreground="White" SelectionChanged="lbInventory_SelectionChanged"/>
+            <Button x:Name="btnDrinkPot" Content="Drink Potion" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="-250,0,0,-480" Height="25" Width="75" Background="DarkGreen" Foreground="LightBlue" Click="btnDrinkPot_Click"/>
+            <Button x:Name="btnUse" Content="Use" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,-480" Height="25" Width="75"/>
+            <Button x:Name="btnEquip" Content="Equip" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="250,0,0,-480" Height="25" Width="75" Click="btnEquip_Click" />
+
+            <!-- Item Description -->
+            <Label Content="Item Description:" Grid.Column="0" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,0,0,200" FontWeight="Bold" />
+            <TextBox x:Name="tbItemDescription" Grid.Column="0" VerticalAlignment="Bottom" Height="200" Margin="0,0,0,0" Background="Black" Foreground="White" IsReadOnly="True"/>
+            
+            <!-- Equipped Items -->
+            <Canvas x:Name="drawEqipepd" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Width="350" Height="250" Margin="0,-350,0,0" MouseRightButtonDown="drawEquipped_MouseRightBtnDown" MouseRightButtonUp="drawEquipped_MouseRightBtnUp"/>
+            <!--<Image Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Width="100" Height="130" Margin="150,-350,0,0" Source="C:\Users\user\source\repos\MyGame\MyGame\bin\Debug\images\BodyArmor.png"/>
+            <Image Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Width="100" Height="100" Margin="20,-350,0,0" Source="C:\Users\user\source\repos\MyGame\MyGame\bin\Debug\images\Sword.png"/>
+            <Image Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" Width="auto" Height="130" Margin="0,-350,20,0" Source="C:\Users\user\source\repos\MyGame\MyGame\bin\Debug\images\Shield.png"/> -->
+        </Grid>
+
+        <!-- New Character Creation -->
+        <Border x:Name="charCreation" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Width="350" Height="250" Visibility="Hidden" Padding="15" Background="Orange" CornerRadius="25,25,25,25" >
+            <Grid Background="Black">
+                <Label Content="Type in character name:" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,-100,0,0" Foreground="White" />
+                <TextBox x:Name="tbCharName" Text="asd" HorizontalAlignment="Center" VerticalAlignment="Center"  Width="200" MaxLines="1"/>
+                <Button x:Name="btnCreateChar" Content="Create" Width="76" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,150,0,0" Click="btnCreateChar_Click"/>
+            </Grid>
+
+        </Border>
+    </Grid>
+</Window>

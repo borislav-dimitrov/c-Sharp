@@ -1,0 +1,15 @@
+
+
+game icon
+
+fixed attacking animation where enemy attacks after being killed
+
+updated item info (now showing level req)
+
+
+
+Working Equipp Item system, probably
+
+.. Creating some items
+
+..

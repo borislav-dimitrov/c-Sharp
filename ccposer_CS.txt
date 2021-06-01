@@ -1,0 +1,303 @@
+using Microsoft.Win32;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+using System.Windows.Threading;
+
+namespace WpfApp3
+{
+    public partial class MainWindow : Window
+    {
+		public List<string> allUsers = new List<string>();
+
+        public MainWindow()
+        {
+            InitializeComponent();
+        }
+
+		#region GetCurrentDate
+
+		private string GetCurrentDate()
+		{
+			string date = DateTime.Now.ToString("MM/dd/yyyy");
+			string[] splitDate = date.Split('.');
+			date = splitDate[1] + "_" + splitDate[0] + "_" + splitDate[2];
+			return date;
+		}
+		#endregion
+
+		#region Copy
+
+		public void Copy(string sourcePath, string targetPath)
+		{
+			var dbSource = new DirectoryInfo(sourcePath);
+			var dbDest = new DirectoryInfo(targetPath);
+			CopyAll(dbSource, dbDest);
+		}
+		#endregion
+
+		#region copyAll
+
+		public void CopyAll(DirectoryInfo source, DirectoryInfo dest)
+		{
+			// copy subDirs
+			foreach (DirectoryInfo sourceSubDir in source.GetDirectories())
+			{
+				logTbx.Text += $"Copying Folder {dest.FullName}{sourceSubDir.FullName}" + Environment.NewLine;
+				DirectoryInfo nextTargetSubDir = dest.CreateSubdirectory(sourceSubDir.Name);
+
+				CopyAll(sourceSubDir, nextTargetSubDir);
+			}
+
+			// copy files
+			foreach (FileInfo fi in source.GetFiles())
+			{
+				logTbx.Text += $"Copying File {dest.FullName}{fi.Name}" + Environment.NewLine;
+				string destFileName = dest.FullName + @"\" + fi.Name.ToString();
+
+				string fileName = fi.DirectoryName + @"\" + fi.ToString();
+				try
+				{
+					File.Copy(fileName, destFileName, true);
+				}
+				catch (Exception exc)
+				{
+					logTbx.Text += exc.Message.ToString();
+				}
+			}
+
+
+		}
+		#endregion
+
+		#region getUsersFromFile
+
+		public void GetUsersFromFile(string usersFile)
+		{
+			//string usersFile = Directory.GetCurrentDirectory() + "/" + "UserList.txt";
+			//Console.WriteLine("Input path to exported txt file with users");
+
+			//string usersFile = Console.ReadLine();
+
+			if (!usersFile.Contains(".txt"))
+				Console.WriteLine("Please input txt file");
+			else
+			{
+				using (StreamReader file = new StreamReader(usersFile))
+				{
+					int counter = 0;
+					string ln;
+
+					while ((ln = file.ReadLine()) != null)
+					{
+						if (ln.Length > 0)
+                        {
+							string[] splitted = ln.Split('"');
+
+							InsertDotBetweenNames(splitted);
+
+						}
+
+						counter++;
+					}
+				}
+			}
+		}
+
+
+		public void InsertDotBetweenNames(string[] splitted)
+        {
+			if (splitted[1].Contains(' '))
+            {
+				string[] fixUsername = splitted[1].Split(' ');
+				allUsers.Add(fixUsername[0] + "." + fixUsername[1]);
+
+			}
+			else
+				allUsers.Add(splitted[1]);
+
+		}
+
+		public void FillUersTbx()
+        {
+			foreach(string user in allUsers)
+            {
+				usersListTbx.Text += user + Environment.NewLine;
+            }
+        }
+		#endregion
+
+		#region LoadUsersFile
+
+		private void LoadUsersFile()
+        {
+			OpenFileDialog loadUsers = new OpenFileDialog();
+			loadUsers.FileName = "usersList";
+			loadUsers.DefaultExt = ".txt";
+			loadUsers.Filter = "Text documents (.txt)|*.txt";
+
+			Nullable<bool> result = loadUsers.ShowDialog();
+
+			if (result == true)
+            {
+				GetUsersFromFile(loadUsers.FileName.ToString());
+				usersFileDirLbl.Content = loadUsers.FileName.ToString();
+            }
+		}
+		#endregion
+
+		#region UpdateDB
+
+		private void UpdateDB()
+        {
+			string newDBPath = newDbDirTbx.Text;
+
+			//string targetPath1 = @"\\172.21.2.6\users\appdata\";
+			string targetPath1 = @"C:\Users\user\source\repos\WpfApp3\WpfApp3\bin\Debug\originalTestDB\users\";
+			string targetPath2 = @"\Appdata\Roaming\Thinstall\Colour Composer\%drive_C%\db\";
+
+			foreach (string user in allUsers)
+            {
+				string dbToUpdatePath = targetPath1 + user + targetPath2;
+
+				Copy(newDBPath, dbToUpdatePath);
+            }
+		}
+        #endregion
+
+        #region BackupDB
+
+		private void BackupDB()
+        {
+			string todayDate = GetCurrentDate();
+			
+
+			foreach (string user in allUsers)
+			{
+
+				//string backUpDbFrom1 = @"\\172.21.2.6\users\appdata\";
+				string backUpDbFrom1 = @"C:\Users\user\source\repos\WpfApp3\WpfApp3\bin\Debug\originalTestDB\users\";
+				string backUpDbFrom2 = @"\Appdata\Roaming\Thinstall\Colour Composer\%drive_C%\db\";
+
+				//string backUpDbTo1 = @"\\172.21.2.6\users\appdata\";
+				string backUpDbTo1 = @"C:\Users\user\source\repos\WpfApp3\WpfApp3\bin\Debug\originalTestDB\users\";
+				string backUpDbTo2 = @"\Appdata\Roaming\Thinstall\Colour Composer\%drive_C%\db_Back_";
+				backUpDbTo2 = backUpDbTo2 + todayDate + @"\";
+
+				string backupFrom = backUpDbFrom1 + user + backUpDbFrom2;
+				string backupTo = backUpDbTo1 + user + backUpDbTo2;
+
+				Copy(backupFrom, backupTo);
+			}
+		}
+		#endregion
+
+		#region CheckIfPathkWithNewDbIsValid
+
+		private void CheckIfPathkWithNewDbIsValid(string newDbLink)
+		{
+			if(Directory.Exists(newDbLink))
+            {
+				CheckDbConsistency(newDbLink);
+			}
+            else
+            {
+				MessageBox.Show("Invalid path for new DB");
+            }
+
+		}
+        #region CheckDbConsistency
+
+		private void CheckDbConsistency(string newDbLink)
+        {
+			string checkLog = newDbLink + @"\LOG.DB";
+			string checkColour = newDbLink + @"\colour\COLCARD.DB";
+			string checkDispense = newDbLink + @"\dispense\flink.dat";
+			string checkFormula = newDbLink + @"\formula\FORMULA.DB";
+			string checkPrice = newDbLink + @"\Price\baseexc.DB";
+			string checkProduct = newDbLink + @"\product\BASEATTR.DB";
+
+			if (File.Exists(checkLog) && File.Exists(checkColour) && File.Exists(checkDispense) &&
+				File.Exists(checkFormula) && File.Exists(checkPrice) && File.Exists(checkProduct))
+
+            {
+				newDbDirTbx.IsReadOnly = true;
+				executeBtn.IsEnabled = true;
+			}
+			else
+            {
+				MessageBox.Show("Your DB is not valid !");
+            }
+
+        }
+		#endregion
+		#endregion
+
+		#region CheckNewDbInputState
+
+		private void CheckNewDbInputState()
+        {
+			string checkIfUsersFileIsLoaded = usersFileDirLbl.Content.ToString();
+
+			if (checkIfUsersFileIsLoaded.Length > 1)
+            {
+				newDbDirTbx.IsReadOnly = false;
+				checkNewDbPathBtn.IsEnabled = true;
+				
+			}
+        }
+		#endregion
+
+		private void loadUsersTxtBtn_Click(object sender, RoutedEventArgs e)
+        {
+			LoadUsersFile();
+			FillUersTbx();
+			//CheckNewDbInputState();
+        }
+
+        private void executeBtn_Click(object sender, RoutedEventArgs e)
+        {
+			newDbDirTbx.IsReadOnly = true;
+
+			logTbx.Text += "==============" + Environment.NewLine;
+			logTbx.Text += "Updating.." + Environment.NewLine + Environment.NewLine + Environment.NewLine;
+
+			UpdateDB();
+
+			newDbDirTbx.IsReadOnly = false;
+		}
+
+        private void backupOldDbBtn_Click(object sender, RoutedEventArgs e)
+        {
+			logTbx.Text += "==============" + Environment.NewLine;
+			logTbx.Text += "Backing up.." + Environment.NewLine + Environment.NewLine + Environment.NewLine;
+
+			BackupDB();
+		}
+
+        private void checkNewDbPathBtn_Click(object sender, RoutedEventArgs e)
+        {
+			CheckIfPathkWithNewDbIsValid(newDbDirTbx.Text.ToString());
+
+		}
+
+        private void newDbDirTbx_onTextChange(object sender, TextChangedEventArgs e)
+        {
+			if (newDbDirTbx.Text.Length > 0)
+				checkNewDbPathBtn.IsEnabled = true;
+			else
+				checkNewDbPathBtn.IsEnabled = false;
+        }
+    }
+}

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Incess_Reports", "ConsoleApp4\Incess_Reports.csproj", "{408C6312-337E-4295-8724-13C984EB32A2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{408C6312-337E-4295-8724-13C984EB32A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{408C6312-337E-4295-8724-13C984EB32A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{408C6312-337E-4295-8724-13C984EB32A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{408C6312-337E-4295-8724-13C984EB32A2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BD40A2A2-C4B4-4D45-8F73-F8AF34D3A295}
+	EndGlobalSection
+EndGlobal

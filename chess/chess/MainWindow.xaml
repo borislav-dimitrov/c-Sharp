@@ -1,0 +1,366 @@
+﻿<Window x:Class="chess.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:chess"
+        mc:Ignorable="d"
+        MinHeight="750"
+        MinWidth="750"
+        Title="MyChess" Height="750" Width="750">
+    <Grid x:Name="main" Background="Black">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="80"/>
+            <ColumnDefinition Width="80"/>
+            <ColumnDefinition Width="80"/>
+            <ColumnDefinition Width="80"/>
+            <ColumnDefinition Width="80"/>
+            <ColumnDefinition Width="80"/>
+            <ColumnDefinition Width="80"/>
+            <ColumnDefinition Width="80"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <!-- Outline Grid Info -->
+            <!-- Numbers -->
+                <!-- Left Numbers -->
+        <Label Content="1" Grid.Column="0" Grid.Row="8" Background="Black" Foreground="White" FontSize="20" FontWeight="ExtraBold" VerticalContentAlignment="Center" HorizontalAlignment="Right"/>
+        <Label Content="2" Grid.Column="0" Grid.Row="7" Background="Black" Foreground="White" FontSize="20" FontWeight="ExtraBold" VerticalContentAlignment="Center" HorizontalAlignment="Right"/>
+        <Label Content="3" Grid.Column="0" Grid.Row="6" Background="Black" Foreground="White" FontSize="20" FontWeight="ExtraBold" VerticalContentAlignment="Center" HorizontalAlignment="Right"/>
+        <Label Content="4" Grid.Column="0" Grid.Row="5" Background="Black" Foreground="White" FontSize="20" FontWeight="ExtraBold" VerticalContentAlignment="Center" HorizontalAlignment="Right"/>
+        <Label Content="5" Grid.Column="0" Grid.Row="4" Background="Black" Foreground="White" FontSize="20" FontWeight="ExtraBold" VerticalContentAlignment="Center" HorizontalAlignment="Right"/>
+        <Label Content="6" Grid.Column="0" Grid.Row="3" Background="Black" Foreground="White" FontSize="20" FontWeight="ExtraBold" VerticalContentAlignment="Center" HorizontalAlignment="Right"/>
+        <Label Content="7" Grid.Column="0" Grid.Row="2" Background="Black" Foreground="White" FontSize="20" FontWeight="ExtraBold" VerticalContentAlignment="Center" HorizontalAlignment="Right"/>
+        <Label Content="8" Grid.Column="0" Grid.Row="1" Background="Black" Foreground="White" FontSize="20" FontWeight="ExtraBold" VerticalContentAlignment="Center" HorizontalAlignment="Right"/>
+                <!-- Right Numbers -->
+        <Label Content="1" Grid.Column="9" Grid.Row="8" Background="Black" Foreground="White" FontSize="20" FontWeight="ExtraBold" VerticalContentAlignment="Center" HorizontalAlignment="Left">
+            <Label.LayoutTransform>
+                <RotateTransform Angle="180"/>
+            </Label.LayoutTransform>
+        </Label>
+        <Label Content="2" Grid.Column="9" Grid.Row="7" Background="Black" Foreground="White" FontSize="20" FontWeight="ExtraBold" VerticalContentAlignment="Center" HorizontalAlignment="Left">
+            <Label.LayoutTransform>
+                <RotateTransform Angle="180"/>
+            </Label.LayoutTransform>
+        </Label>
+        <Label Content="3" Grid.Column="9" Grid.Row="6" Background="Black" Foreground="White" FontSize="20" FontWeight="ExtraBold" VerticalContentAlignment="Center" HorizontalAlignment="Left">
+            <Label.LayoutTransform>
+                <RotateTransform Angle="180"/>
+            </Label.LayoutTransform>
+        </Label>
+        <Label Content="4" Grid.Column="9" Grid.Row="5" Background="Black" Foreground="White" FontSize="20" FontWeight="ExtraBold" VerticalContentAlignment="Center" HorizontalAlignment="Left">
+            <Label.LayoutTransform>
+                <RotateTransform Angle="180"/>
+            </Label.LayoutTransform>
+        </Label>
+        <Label Content="5" Grid.Column="9" Grid.Row="4" Background="Black" Foreground="White" FontSize="20" FontWeight="ExtraBold" VerticalContentAlignment="Center" HorizontalAlignment="Left">
+            <Label.LayoutTransform>
+                <RotateTransform Angle="180"/>
+            </Label.LayoutTransform>
+        </Label>
+        <Label Content="6" Grid.Column="9" Grid.Row="3" Background="Black" Foreground="White" FontSize="20" FontWeight="ExtraBold" VerticalContentAlignment="Center" HorizontalAlignment="Left">
+            <Label.LayoutTransform>
+                <RotateTransform Angle="180"/>
+            </Label.LayoutTransform>
+        </Label>
+        <Label Content="7" Grid.Column="9" Grid.Row="2" Background="Black" Foreground="White" FontSize="20" FontWeight="ExtraBold" VerticalContentAlignment="Center" HorizontalAlignment="Left">
+            <Label.LayoutTransform>
+                <RotateTransform Angle="180"/>
+            </Label.LayoutTransform>
+        </Label>
+        <Label Content="8" Grid.Column="9" Grid.Row="1" Background="Black" Foreground="White" FontSize="20" FontWeight="ExtraBold" VerticalContentAlignment="Center" HorizontalAlignment="Left">
+            <Label.LayoutTransform>
+                <RotateTransform Angle="180"/>
+            </Label.LayoutTransform>
+        </Label>
+        
+        <!-- Letters -->
+            <!-- Top Letters -->
+        <Label Content="a" Grid.Column="1" Grid.Row="0" VerticalAlignment="Bottom" HorizontalAlignment="Center" Foreground="White" FontWeight="ExtraBold" FontSize="20">
+            <Label.LayoutTransform>
+                <RotateTransform Angle="180"/>
+            </Label.LayoutTransform>
+        </Label>
+        <Label Content="b" Grid.Column="2" Grid.Row="0" VerticalAlignment="Bottom" HorizontalAlignment="Center" Foreground="White" FontWeight="ExtraBold" FontSize="20">
+            <Label.LayoutTransform>
+                <RotateTransform Angle="180"/>
+            </Label.LayoutTransform>
+        </Label>
+        <Label Content="c" Grid.Column="3" Grid.Row="0" VerticalAlignment="Bottom" HorizontalAlignment="Center" Foreground="White" FontWeight="ExtraBold" FontSize="20">
+            <Label.LayoutTransform>
+                <RotateTransform Angle="180"/>
+            </Label.LayoutTransform>
+        </Label>
+        <Label Content="d" Grid.Column="4" Grid.Row="0" VerticalAlignment="Bottom" HorizontalAlignment="Center" Foreground="White" FontWeight="ExtraBold" FontSize="20">
+            <Label.LayoutTransform>
+                <RotateTransform Angle="180"/>
+            </Label.LayoutTransform>
+        </Label>
+        <Label Content="e" Grid.Column="5" Grid.Row="0" VerticalAlignment="Bottom" HorizontalAlignment="Center" Foreground="White" FontWeight="ExtraBold" FontSize="20">
+            <Label.LayoutTransform>
+                <RotateTransform Angle="180"/>
+            </Label.LayoutTransform>
+        </Label>
+        <Label Content="f" Grid.Column="6" Grid.Row="0" VerticalAlignment="Bottom" HorizontalAlignment="Center" Foreground="White" FontWeight="ExtraBold" FontSize="20">
+            <Label.LayoutTransform>
+                <RotateTransform Angle="180"/>
+            </Label.LayoutTransform>
+        </Label>
+        <Label Content="g" Grid.Column="7" Grid.Row="0" VerticalAlignment="Bottom" HorizontalAlignment="Center" Foreground="White" FontWeight="ExtraBold" FontSize="20">
+            <Label.LayoutTransform>
+                <RotateTransform Angle="180"/>
+            </Label.LayoutTransform>
+        </Label>
+        <Label Content="h" Grid.Column="8" Grid.Row="0" VerticalAlignment="Bottom" HorizontalAlignment="Center" Foreground="White" FontWeight="ExtraBold" FontSize="20">
+            <Label.LayoutTransform>
+                <RotateTransform Angle="180"/>
+            </Label.LayoutTransform>
+        </Label>
+            <!-- Bot Letters -->
+        <Label Content="a" Grid.Column="1" Grid.Row="9" VerticalAlignment="Top" HorizontalAlignment="Center" Foreground="White" FontSize="20" FontWeight="ExtraBold" Margin="0,0,0,-6"/>
+        <Label Content="b" Grid.Column="2" Grid.Row="9" VerticalAlignment="Top" HorizontalAlignment="Center" Foreground="White" FontSize="20" FontWeight="ExtraBold" Margin="0,0,0,-6"/>
+        <Label Content="c" Grid.Column="3" Grid.Row="9" VerticalAlignment="Top" HorizontalAlignment="Center" Foreground="White" FontSize="20" FontWeight="ExtraBold" Margin="0,0,0,-6"/>
+        <Label Content="d" Grid.Column="4" Grid.Row="9" VerticalAlignment="Top" HorizontalAlignment="Center" Foreground="White" FontSize="20" FontWeight="ExtraBold" Margin="0,0,0,-6"/>
+        <Label Content="e" Grid.Column="5" Grid.Row="9" VerticalAlignment="Top" HorizontalAlignment="Center" Foreground="White" FontSize="20" FontWeight="ExtraBold" Margin="0,0,0,-6"/>
+        <Label Content="f" Grid.Column="6" Grid.Row="9" VerticalAlignment="Top" HorizontalAlignment="Center" Foreground="White" FontSize="20" FontWeight="ExtraBold" Margin="0,0,0,-6"/>
+        <Label Content="g" Grid.Column="7" Grid.Row="9" VerticalAlignment="Top" HorizontalAlignment="Center" Foreground="White" FontSize="20" FontWeight="ExtraBold" Margin="0,0,0,-6"/>
+        <Label Content="h" Grid.Column="8" Grid.Row="9" VerticalAlignment="Top" HorizontalAlignment="Center" Foreground="White" FontSize="20" FontWeight="ExtraBold" Margin="0,0,0,-6"/>
+        <!-- Draw Border -->
+        <!-- Row 1 -->
+        <Border Grid.Column="1" Grid.Row="1" BorderBrush="gray" Background="White" BorderThickness="1">
+            <Button x:Name="btnA08" Background="White"/>
+        </Border>
+        <Border Grid.Column="2" Grid.Row="1" Background="Gray" BorderBrush="Gray" BorderThickness="1">
+            <Button x:Name="btnB08" Background="Gray"/>
+        </Border>
+        <Border Grid.Column="3" Grid.Row="1" BorderBrush="gray" Background="White" BorderThickness="1">
+            <Button x:Name="btnC08" Background="White"/>
+        </Border>
+        <Border Grid.Column="4" Grid.Row="1" BorderBrush="gray" Background="Gray" BorderThickness="1">
+            <Button x:Name="btnD08" Background="Gray"/>
+        </Border>
+        <Border Grid.Column="5" Grid.Row="1" BorderBrush="gray" Background="White" BorderThickness="1">
+            <Button x:Name="btnE08" Background="White"/>
+        </Border>
+        <Border Grid.Column="6" Grid.Row="1" BorderBrush="gray" Background="Gray" BorderThickness="1">
+            <Button x:Name="btnF08" Background="Gray"/>
+        </Border>
+        <Border Grid.Column="7" Grid.Row="1" BorderBrush="gray" Background="White" BorderThickness="1">
+            <Button x:Name="btnG08" Background="White"/>
+        </Border>
+        <Border Grid.Column="8" Grid.Row="1" BorderBrush="gray" Background="Gray" BorderThickness="1">
+            <Button x:Name="btnH08" Background="Gray"/>
+        </Border>
+        <!-- Row 2 -->
+        <Border Grid.Column="1" Grid.Row="2" BorderBrush="gray" Background="Gray" BorderThickness="1">
+            <Button x:Name="btnA07" Background="Gray"/>
+        </Border>
+        <Border Grid.Column="2" Grid.Row="2" BorderBrush="gray" Background="White" BorderThickness="1">
+            <Button x:Name="btnB07" Background="White" />
+        </Border>
+        <Border Grid.Column="3" Grid.Row="2" BorderBrush="gray" Background="Gray" BorderThickness="1">
+            <Button x:Name="btnC07" Background="Gray"/>
+        </Border>
+        <Border Grid.Column="4" Grid.Row="2" BorderBrush="gray" Background="White" BorderThickness="1">
+            <Button x:Name="btnD07" Background="White" />
+        </Border>
+        <Border Grid.Column="5" Grid.Row="2" BorderBrush="gray" Background="Gray" BorderThickness="1">
+            <Button x:Name="btnE07" Background="Gray"/>
+        </Border>
+        <Border Grid.Column="6" Grid.Row="2" BorderBrush="gray" Background="White" BorderThickness="1">
+            <Button x:Name="btnF07" Background="White"/>
+        </Border>
+        <Border Grid.Column="7" Grid.Row="2" BorderBrush="gray" Background="Gray" BorderThickness="1">
+            <Button x:Name="btnG07" Background="Gray"/>
+        </Border>
+        <Border Grid.Column="8" Grid.Row="2" BorderBrush="gray" Background="White" BorderThickness="1">
+            <Button x:Name="btnH07" Background="White"/>
+        </Border>
+        <!-- Row 3 -->
+        <Border Grid.Column="1" Grid.Row="3" BorderBrush="gray" Background="White" BorderThickness="1">
+            <Button x:Name="btnA06" Background="White"/>
+        </Border>
+        <Border Grid.Column="2" Grid.Row="3" BorderBrush="gray" Background="Gray" BorderThickness="1">
+            <Button x:Name="btnB06" Background="Gray"/>
+        </Border>
+        <Border Grid.Column="3" Grid.Row="3" BorderBrush="gray" Background="White" BorderThickness="1">
+            <Button x:Name="btnC06" Background="White"/>
+        </Border>
+        <Border Grid.Column="4" Grid.Row="3" BorderBrush="gray" Background="Gray" BorderThickness="1">
+            <Button x:Name="btnD06" Background="Gray"/>
+        </Border>
+        <Border Grid.Column="5" Grid.Row="3" BorderBrush="gray" Background="White" BorderThickness="1">
+            <Button x:Name="btnE06" Background="White"/>
+        </Border>
+        <Border Grid.Column="6" Grid.Row="3" BorderBrush="gray" Background="Gray" BorderThickness="1">
+            <Button x:Name="btnF06" Background="Gray"/>
+        </Border>
+        <Border Grid.Column="7" Grid.Row="3" BorderBrush="gray" Background="White" BorderThickness="1">
+            <Button x:Name="btnG06" Background="White"/>
+        </Border>
+        <Border Grid.Column="8" Grid.Row="3" BorderBrush="gray" Background="Gray" BorderThickness="1">
+            <Button x:Name="btnH06" Background="Gray"/>
+        </Border>
+        <!-- Row 4 -->
+        <Border Grid.Column="1" Grid.Row="4" BorderBrush="gray" Background="Gray" BorderThickness="1">
+            <Button x:Name="btnA05" Background="Gray"/>
+        </Border>
+        <Border Grid.Column="2" Grid.Row="4" BorderBrush="gray" Background="White" BorderThickness="1">
+            <Button x:Name="btnB05" Background="White"/>
+        </Border>
+        <Border Grid.Column="3" Grid.Row="4" BorderBrush="gray" Background="Gray" BorderThickness="1">
+            <Button x:Name="btnC05" Background="Gray"/>
+        </Border>
+        <Border Grid.Column="4" Grid.Row="4" BorderBrush="gray" Background="White" BorderThickness="1">
+            <Button x:Name="btnD05" Background="White"/>
+        </Border>
+        <Border Grid.Column="5" Grid.Row="4" BorderBrush="gray" Background="Gray" BorderThickness="1">
+            <Button x:Name="btnE05" Background="Gray"/>
+        </Border>
+        <Border Grid.Column="6" Grid.Row="4" BorderBrush="gray" Background="White" BorderThickness="1">
+            <Button x:Name="btnF05" Background="White"/>
+        </Border>
+        <Border Grid.Column="7" Grid.Row="4" BorderBrush="gray" Background="Gray" BorderThickness="1">
+            <Button x:Name="btnG05" Background="Gray"/>
+        </Border>
+        <Border Grid.Column="8" Grid.Row="4" BorderBrush="gray" Background="White" BorderThickness="1">
+            <Button x:Name="btnH05" Background="White"/>
+        </Border>
+        <!-- Row 5 -->
+        <Border Grid.Column="1" Grid.Row="5" BorderBrush="gray" Background="White" BorderThickness="1">
+            <Button x:Name="btnA04" Background="White"/>
+        </Border>
+        <Border Grid.Column="2" Grid.Row="5" BorderBrush="gray" Background="Gray" BorderThickness="1">
+            <Button x:Name="btnB04" Background="Gray"/>
+        </Border>
+        <Border Grid.Column="3" Grid.Row="5" BorderBrush="gray" Background="White" BorderThickness="1">
+            <Button x:Name="btnC04" Background="White"/>
+        </Border>
+        <Border Grid.Column="4" Grid.Row="5" BorderBrush="gray" Background="Gray" BorderThickness="1">
+            <Button x:Name="btnD04" Background="Gray"/>
+        </Border>
+        <Border Grid.Column="5" Grid.Row="5" BorderBrush="gray" Background="White" BorderThickness="1">
+            <Button x:Name="btnE04" Background="White"/>
+        </Border>
+        <Border Grid.Column="6" Grid.Row="5" BorderBrush="gray" Background="Gray" BorderThickness="1">
+            <Button x:Name="btnF04" Background="Gray"/>
+        </Border>
+        <Border Grid.Column="7" Grid.Row="5" BorderBrush="gray" Background="White" BorderThickness="1">
+            <Button x:Name="btnG04" Background="White"/>
+        </Border>
+        <Border Grid.Column="8" Grid.Row="5" BorderBrush="gray" Background="Gray" BorderThickness="1">
+            <Button x:Name="btnH04" Background="Gray"/>
+        </Border>
+        <!-- Row 6 -->
+        <Border Grid.Column="1" Grid.Row="6" BorderBrush="gray" Background="Gray" BorderThickness="1">
+            <Button x:Name="btnA03" Background="Gray" Click="btnA03_Click"/>
+        </Border>
+        <Border Grid.Column="2" Grid.Row="6" BorderBrush="gray" Background="White" BorderThickness="1">
+            <Button x:Name="btnB03" Background="White"/>
+        </Border>
+        <Border Grid.Column="3" Grid.Row="6" BorderBrush="gray" Background="Gray" BorderThickness="1">
+            <Button x:Name="btnC03" Background="Gray"/>
+        </Border>
+        <Border Grid.Column="4" Grid.Row="6" BorderBrush="gray" Background="White" BorderThickness="1">
+            <Button x:Name="btnD03" Background="White"/>
+        </Border>
+        <Border Grid.Column="5" Grid.Row="6" BorderBrush="gray" Background="Gray" BorderThickness="1">
+            <Button x:Name="btnE03" Background="Gray"/>
+        </Border>
+        <Border Grid.Column="6" Grid.Row="6" BorderBrush="gray" Background="White" BorderThickness="1">
+            <Button x:Name="btnF03" Background="White"/>
+        </Border>
+        <Border Grid.Column="7" Grid.Row="6" BorderBrush="gray" Background="Gray" BorderThickness="1">
+            <Button x:Name="btnG03" Background="Gray"/>
+        </Border>
+        <Border Grid.Column="8" Grid.Row="6" BorderBrush="gray" Background="White" BorderThickness="1">
+            <Button x:Name="btnH03" Background="White"/>
+        </Border>
+        <!-- Row 7 -->
+        <Border Grid.Column="1" Grid.Row="7" BorderBrush="gray" Background="White" BorderThickness="1">
+            <Button x:Name="btnA02" Background="White" Click="btnA02_Click"/>
+            <!--  <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Background" Value="Green"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border Background="{TemplateBinding Background}" BorderBrush="Gray" BorderThickness="1">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="BorderBrush" Value="Green"/>
+                                <Setter Property="BorderThickness" Value="2"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+
+                </Button.Style> -->
+        </Border>
+        <Border Grid.Column="2" Grid.Row="7" BorderBrush="gray" Background="Gray" BorderThickness="1">
+            <Button x:Name="btnB02" Background="Gray"/>
+        </Border>
+        <Border Grid.Column="3" Grid.Row="7" BorderBrush="gray" Background="White" BorderThickness="1">
+            <Button x:Name="btnC02" Background="White"/>
+        </Border>
+        <Border Grid.Column="4" Grid.Row="7" BorderBrush="gray" Background="Gray" BorderThickness="1">
+            <Button x:Name="btnD02" Background="Gray"/>
+        </Border>
+        <Border Grid.Column="5" Grid.Row="7" BorderBrush="gray" Background="White" BorderThickness="1">
+            <Button x:Name="btnE02" Background="White"/>
+        </Border>
+        <Border Grid.Column="6" Grid.Row="7" BorderBrush="gray" Background="Gray" BorderThickness="1">
+            <Button x:Name="btnF02" Background="Gray"/>
+        </Border>
+        <Border Grid.Column="7" Grid.Row="7" BorderBrush="gray" Background="White" BorderThickness="1">
+            <Button x:Name="btnG02" Background="White"/>
+        </Border>
+        <Border Grid.Column="8" Grid.Row="7" BorderBrush="gray" Background="Gray" BorderThickness="1">
+            <Button x:Name="btnH02" Background="Gray"/>
+        </Border>
+        <!-- Row 8 -->
+        <Border Grid.Column="1" Grid.Row="8" BorderBrush="gray" Background="Gray" BorderThickness="1">
+            <Button x:Name="btnA01" Background="Gray"/>
+        </Border>
+        <Border Grid.Column="2" Grid.Row="8" BorderBrush="gray" Background="White" BorderThickness="1">
+            <Button x:Name="btnB01" Background="White"/>
+        </Border>
+        <Border Grid.Column="3" Grid.Row="8" BorderBrush="gray" Background="Gray" BorderThickness="1">
+            <Button x:Name="btnC01" Background="Gray"/>
+        </Border>
+        <Border Grid.Column="4" Grid.Row="8" BorderBrush="gray" Background="White" BorderThickness="1">
+            <Button x:Name="btnD01" Background="White"/>
+        </Border>
+        <Border Grid.Column="5" Grid.Row="8" BorderBrush="gray" Background="Gray" BorderThickness="1">
+            <Button x:Name="btnE01" Background="Gray"/>
+        </Border>
+        <Border Grid.Column="6" Grid.Row="8" BorderBrush="gray" Background="White" BorderThickness="1">
+            <Button x:Name="btnF01" Background="White"/>
+        </Border>
+        <Border Grid.Column="7" Grid.Row="8" BorderBrush="gray" Background="Gray" BorderThickness="1">
+            <Button x:Name="btnG01" Background="Gray"/>
+        </Border>
+        <Border Grid.Column="8" Grid.Row="8" BorderBrush="gray" Background="White" BorderThickness="1">
+            <Button x:Name="btnH01" Background="White"/>
+        </Border>
+
+
+
+    </Grid>
+</Window>
