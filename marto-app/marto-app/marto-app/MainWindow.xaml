@@ -32,6 +32,9 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
+        <Button x:Name="magicBtn" Content="Magic Btn" Grid.Column="4" Grid.ColumnSpan="2" Click="magicBtn_Click"/>
+
+        <Label x:Name="errLbl"/>
         <Label x:Name="x1Lbl" Content="X 1" VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.Column="2" Grid.Row="1" FontWeight="ExtraBold"/>
         <Label x:Name="x2Lbl" Content="X 2" VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.Column="3" Grid.Row="1" FontWeight="ExtraBold"/>
         <Label x:Name="x3Lbl" Content="X 3" VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.Column="4" Grid.Row="1" FontWeight="ExtraBold"/>

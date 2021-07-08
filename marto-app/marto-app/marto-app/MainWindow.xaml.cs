@@ -23,6 +23,7 @@ namespace marto_app
     {
         public List<Months> allMonths = new List<Months>();
         public List<dDays> allDays = new List<dDays>();
+        public List<figures> allFigures = new List<figures>();
         public List<Label> allLabels = new List<Label>();
         //public Months Months2;
 
@@ -36,15 +37,20 @@ namespace marto_app
 
         private void getAllLabels()
         {
-            foreach (Label label in myGrid.Children)
+            try
             {
-                try
+                foreach (var label in myGrid.Children)
                 {
-                    allLabels.Add(label);
+                    string defineType = label.GetType().ToString();
+                    if (defineType.ToLower().Equals("system.windows.controls.label"))
+                    {
+                        allLabels.Add(label as Label);
+                    }
                 }
-                catch (Exception)
-                {
-                }
+            }
+            catch (Exception)
+            {
+
             }
         }
 
@@ -156,6 +162,19 @@ namespace marto_app
 
         #endregion
 
+        #region create figures
+
+        private void createFigures()
+        {
+            figures figure1a = new figures("figure1a", new SolidColorBrush(Colors.Red), 5);
+
+            //figure1a.buildFigure1a(x1y1Lbl, figure1a, allLabels);
+
+            allFigures.Add(figure1a);
+        }
+
+        #endregion
+
         #region created objects check
 
         private void createdObjctsCheck(string obj)
@@ -194,17 +213,23 @@ namespace marto_app
 
         private void main()
         {
+            getAllLabels();
+            
             createMtnhs();
             createDays();
-            getAllLabels();
+
+            markAllItems();
+
+            
+            
             //createdObjctsCheck("labels");
             //markOneItem(allMonths[0].x,allMonths[0].y);
-            markAllItems();
+            
         }
 
         #region markItem
 
-        private void markOneItem(int x, int y)
+        private void markOneItem(int x, int y, SolidColorBrush bg)
         {
             //x1y1Lbl
             string lblToSelName = 'x' + x.ToString() + 'y' + y.ToString() + "Lbl";
@@ -213,7 +238,7 @@ namespace marto_app
             {
                 if (lbl.Name == lblToSelName)
                 {
-                    lbl.Background = new SolidColorBrush(Colors.LightGray);
+                    lbl.Background = bg;
                 }
             }
         }
@@ -222,16 +247,51 @@ namespace marto_app
         {
             foreach(Months month in allMonths)
             {
-                markOneItem(month.x,month.y);
+                markOneItem(month.x,month.y, month.bg);
             }
 
             foreach(dDays day in allDays)
             {
-                markOneItem(day.x, day.y);
+                markOneItem(day.x, day.y, day.bg);
             }
         }
 
+
+
         #endregion
 
+        private void magicBtn_Click(object sender, RoutedEventArgs e)
+        {
+            createFigures();
+            calcAllPossiblePositiones();
+        }
+
+        private void calcAllPossiblePositiones()
+        {
+            string allValidPosStartPnt = "";
+
+            foreach(Label label in allLabels)
+            {
+                allFigures[0].buildFigure1a(label, allFigures[0], allLabels, true);
+                markAllItems();
+            }
+            
+            foreach(string str in allFigures[0].validPosStartPnt)
+            {
+                allValidPosStartPnt += str + "  ;";
+            }
+
+            foreach(string str in allFigures[0].validPosStartPnt)
+            {
+                foreach(Label lbl in allLabels)
+                {
+                    if(str.ToString() == lbl.Name.ToString())
+                    {
+                        lbl.Background = allFigures[0].bg;
+                    }
+                }
+            }
+            MessageBox.Show("Total valid: " + allFigures[0].validPositions.ToString() + Environment.NewLine + "All valid start points: " + allValidPosStartPnt);
+        }
     }
 }
